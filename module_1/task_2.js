@@ -15,16 +15,30 @@
 
 const total = 100;
 var ordered;
+// var не истользуй они очень противные) и ordered = 50 делай сразу же тут.
 
 const confirmed = "Заказ оформлен, с вами свяжется менеджер"
 const cancelled  = "На складе недостаточно твоаров!"
 
-ordered = 50;
+
+
+ordered = 50; // лишняя строка
+
 if (ordered > total) {
     console.log('На складе недостаточно твоаров!');
 } else {
     console.log('Заказ оформлен, с вами свяжется менеджер');
 }
+    // используй созданные переменные со стр 21 и 22 - старайся никогда не повторять ранее написаный код
+// можно еще кпростить код вынеся проверку в константу const isAvailable = ordered > total;
+/*
+if (isAvailable) {
+    console.log(confirmed);
+} else {
+    console.log(cancelled);
+}
+
+* */
 
 ordered = 20;
 if (ordered > total) {
@@ -41,5 +55,5 @@ if (ordered > total) {
 }
 
 ordered = 130;
-let cases = (total > ordered) ? confirmed : cancelled;
+let cases = (total > ordered) ? confirmed : cancelled; // отлично!!!
 console.log(cases);

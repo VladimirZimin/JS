@@ -21,3 +21,4 @@ do {
 } while (counter !== null);
 
 alert(total);
+
