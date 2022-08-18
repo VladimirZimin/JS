@@ -31,7 +31,7 @@ alert(message);
 
 // Способ 2
 
-switch (adminPassword) {
+switch (adminPassword) { //отлично!
     case null:
         message = ('Отменено пользователем!');
         break;
