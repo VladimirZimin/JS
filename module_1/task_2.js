@@ -14,7 +14,7 @@
 
 
 const total = 100;
-var ordered;
+let ordered;
 
 const confirmed = "Заказ оформлен, с вами свяжется менеджер"
 const cancelled  = "На складе недостаточно твоаров!"

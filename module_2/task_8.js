@@ -23,13 +23,11 @@
 
 const numbers = [12, 15, 25, 37, 41, 62, 74, 83];
 const message = prompt(`Введите цифру между ${min} и ${max}`);
+let result = Number(message);
 let min = numbers[0];
-let max = numbers[numbers.length - 1];
+let max = numbers[numbers.length - 1]; 
 
-console.log(numbers.includes(message));
-numbers.includes(message)
-
-if (numbers.includes(message)) {
+if (numbers.includes(result)) {
     alert('Поздравляю, Вы угадали!');
 } else if (message === null) {
     alert('Пока');
