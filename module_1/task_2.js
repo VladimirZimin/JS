@@ -14,12 +14,8 @@
 
 
 const total = 100;
-<<<<<<< HEAD
-let ordered;
-=======
 var ordered;
 // var не истользуй они очень противные) и ordered = 50 делай сразу же тут.
->>>>>>> 02a9235a70f2bc6f1d4b14bc796a2fb4d324582c
 
 const confirmed = "Заказ оформлен, с вами свяжется менеджер"
 const cancelled  = "На складе недостаточно твоаров!"

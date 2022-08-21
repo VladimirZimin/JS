@@ -19,11 +19,21 @@ logItems([5, 10, 15, 20, 25, 30, 35, 40, 45, 50]);
 
 */
 
+<<<<<<< HEAD
 const logItems = function (array) {
   for (let i = 1; i < array.length; i += 1) {
     console.log(`Номер: ${i} - ${array[i]}`);
   }
 };
+=======
+const logItems = function(array) {
+
+    for (let i = 1; i < array.length; i += 1) {  // лучше писать  i ++ вместо  i += 1
+        console.log(`Номер: ${i} - ${array[i]}`);
+    }
+}
+
+>>>>>>> 347db1c588e909370b8a6b00345c313559e52bda
 
 logItems(['Mango', 'Poly', 'Ajax', 'Lux', 'Jay', 'Kong']);
 console.log('===================');
@@ -32,11 +42,24 @@ logItems([5, 10, 15, 20, 25, 30, 35, 40, 45, 50]);
 const logItems2 = function (array) {
   let counter = 0;
 
+<<<<<<< HEAD
   for (const word of array) {
     counter += 1;
     console.log(`Номер: ${counter} - ${word}`);
   }
 };
+=======
+
+const logItems2 = function(array) {
+    let counter = 0;
+
+    for (const word of array) {
+        counter += 1 // то же самое
+        console.log(`Номер: ${counter} - ${word}`);
+    }
+}
+
+>>>>>>> 347db1c588e909370b8a6b00345c313559e52bda
 
 logItems2(['Mango', 'Poly', 'Ajax', 'Lux', 'Jay', 'Kong']);
 console.log('===================');
