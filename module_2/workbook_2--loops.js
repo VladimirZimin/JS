@@ -1,16 +1,16 @@
 'use strict';
 
 // Цикл while
-// Инструкция while создает цикл, 
+// Инструкция while создает цикл,
 // который выполняет блок кода, пока условие проверки оценивается как true
 
 while (expression) {
-    // код, тело цикла (statement)
+  // код, тело цикла (statement)
 }
-  
+
 // Оператор while вычисляет expression перед каждой итерацией цикла
 // Если expression оценивается как true, оператор while выполняет statement
-// Если expression оценивается как false, выполнение цикла прерывается 
+// Если expression оценивается как false, выполнение цикла прерывается
 // и скрипт продолжает выполнять инструкции после цикла while.
 
 // Сделаем счетчик.
@@ -20,7 +20,6 @@ while (counter < 10) {
   console.log('counter: ', counter);
   counter += 1;
 }
-
 
 let clientCounter = 18;
 const maxClients = 25;
@@ -36,9 +35,9 @@ let i = 0;
 const car = ['audi', 'bmw', 'vw'];
 
 while (i < car.length) {
-    console.log(car[i]);
+  console.log(car[i]);
 
-    i += 1;
+  i += 1;
 }
 
 //======================================================
@@ -48,7 +47,7 @@ while (i < car.length) {
 // выполняет блок кода до тех пор, пока expression не станет равным false
 
 do {
-    // statement
+  // statement
 } while (expression);
 
 //======================================================
@@ -66,9 +65,9 @@ console.log('Ввели пароль: ', password);
 let userInput;
 
 do {
-    userInput = prompt ('введи число');
-    console.log(userInput);
-} while (userInput !== null  && Number(userInput) !== 10);
+  userInput = prompt('введи число');
+  console.log(userInput);
+} while (userInput !== null && Number(userInput) !== 10);
 
 // пишем условие выполнения
 
@@ -88,16 +87,15 @@ do {
 // 10 !== null || Number(10) !== 10
 // true || false -> false
 
-
 //======================================================
 
 // Цикл for для перебора массива
 // Цикл со счётчиком
 
-for (initialization; condition; post-expression) {
-    // statements
+for (initialization; condition; post - expression) {
+  // statements
 }
-  
+
 /*
     Инициализация (initialization) — выражение инициализации выполняется один 
     раз, когда начинается цикл. Используется для инициализации 
@@ -113,7 +111,7 @@ for (initialization; condition; post-expression) {
     Пост-выражение (post-expression) — выполняется после тела на каждой итерации 
     цикла, но перед проверкой условия. Используется для обновления 
     переменной-счетчика.
- */    
+ */
 
 // Переменные-счетчики, по традиции, называются буквами i/j/k.
 
@@ -133,14 +131,12 @@ for (let i = 0; i <= target; i += 1) {
 
 console.log(sum);
 
-
 // выведем остаток от деления используя цикл.
 const max1 = 10;
 
 for (let i = 0; i < max; i += 1) {
   console.log(`${max} % ${i} = `, max % i);
 }
-
 
 //======================================================
 // Обязательно 3 условия, разделенные ;
@@ -149,8 +145,8 @@ for (let i = 0; i < max; i += 1) {
 const products = ['apple', 'orange', 'kiwi', 'cherry'];
 
 for (let k = 0; k < products.length; k += 1) {
-    console.log('k: ', k);
-    console.log(`products[${k}]: `, products[k]);
+  console.log('k: ', k);
+  console.log(`products[${k}]: `, products[k]);
 }
 
 // С помощью цикла массив можно заполнить данными
@@ -162,13 +158,12 @@ for (let i = 0; i < 3; i += 1) {
 
 console.log('numbers: ', numbers); // ['label-0', 'label-1', 'label-2']
 
-
 //======================================================
 
 // Цикл for...of
 // для перебора массива
 // создает цикл, перебирающий итерируемые объекты, такие как массивы и строки
- // использовать если счетчик не нужен
+// использовать если счетчик не нужен
 
 for (const variable of iterable) {
   // statement
@@ -191,9 +186,8 @@ for (const character of string) {
   console.log(character);
 }
 
-
 //======================================================
-const colors = ['red', 'blue', 'green', 'purple']
+const colors = ['red', 'blue', 'green', 'purple'];
 
 for (const color of colors) {
   console.log(color);
@@ -202,7 +196,11 @@ for (const color of colors) {
 //======================================================
 // вложеные циклы
 
-const matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+const matrix = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
 
 for (let j = 0; j < matrix.length; j += 1) {
   console.log('j: ', j);
@@ -213,7 +211,6 @@ for (let j = 0; j < matrix.length; j += 1) {
   }
 }
 
-
 //======================================================
 /*
   написать скрипт который проверяет строку в переменной и 
@@ -221,7 +218,7 @@ for (let j = 0; j < matrix.length; j += 1) {
 */
 
 // 1. Переводим строку в массив
-// 2. Перебираем массив в цикле 
+// 2. Перебираем массив в цикле
 // 3. Переменная для хранения длинного слова, предпологая что первое самое длинное
 // 4. На каждой итерации сравниваем тнкущее и новое
 
@@ -230,24 +227,23 @@ const words = message.split(' ');
 let longestWord = words[0];
 
 for (let y = 1; y < words.length; y += 1) {
-  if(words[y].length > longestWord.length) {
+  if (words[y].length > longestWord.length) {
     longestWord = words[y];
   }
 }
 
 console.log(longestWord);
 
-
 // Второй вариант, через цикл for...of
 for (const word of words) {
-  if(word.length > longestWord.length) {
+  if (word.length > longestWord.length) {
     longestWord = word;
   }
 }
 
 //======================================================
 
-// написать скрипт который проверяет масив в переменной и 
+// написать скрипт который проверяет масив в переменной и
 //  находит в ней самое маленькое число
 
 const numbers1 = [11, 22, 33, 102, 12, 5];
@@ -270,7 +266,6 @@ for (const num of numbers1) {
 
 console.log(littleNum);
 
-
 //======================================================
 // Найти слово у которого слева 4 буквы, а справа 5
 
@@ -286,7 +281,7 @@ for (let t = 1; t < max2; t += 1) {
   if (prevElementLenght === 4 && nextElementLenght === 5) {
     target1 = words1[t];
   }
-} 
+}
 
 console.log(words1);
 console.log(target1);
@@ -304,7 +299,7 @@ for (let i = 0; i < 10; i += 1) {
 
 //======================================================
 const clients1 = ['ivan', 'roman', 'fedor', 'sergei'];
-const clientNameToFind = 'fedor'; 
+const clientNameToFind = 'fedor';
 let message1;
 
 for (l = 0; l < clients1.length; l += 1) {

@@ -11,7 +11,6 @@ const clients = ['Mango', 'Poly', 'Ajax'];
 
 console.log(clients); // ["Mango", "Poly", "Ajax"]
 
-
 // Доступ к элементам
 
 // const clients = ['Mango', 'Poly', 'Ajax'];
@@ -20,7 +19,6 @@ console.log(clients); // ["Mango", "Poly", "Ajax"]
 console.log(clients[0]); // Mango
 console.log(clients[1]); // Poly
 console.log(clients[2]); // Ajax
-
 
 // Переопределение
 
@@ -35,7 +33,6 @@ clients[3] = 'Alex';
 console.log(clients[3]); // Alex
 
 console.log(clients); // ["Kiwi", "Poly", "Ajax", "Alex"]
-
 
 // Длина массива Свойство length
 
@@ -52,22 +49,19 @@ console.log(clients[4]); // undefined
 clients.length = 2;
 console.log(clients); // ["Mango", "Poly"]
 
-
-
 // Многомерные массивы
-// Массивы могут содержать другие массивы как элементы. 
+// Массивы могут содержать другие массивы как элементы.
 // Это можно использовать для создания матриц
 
 const matrix = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9],
-  ];
-  
-  console.log(matrix[0][0]); // 1
-  console.log(matrix[1][2]); // 6
-  console.log(matrix[2][2]); // 9
-  
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
+
+console.log(matrix[0][0]); // 1
+console.log(matrix[1][2]); // 6
+console.log(matrix[2][2]); // 9
 
 // Для того, чтобы перебрать такой массив, используются вложенные циклы.
 
@@ -83,8 +77,6 @@ for (let i = 0; i < matrix.length; i += 1) {
 }
 
 console.log(total); // 45
-
-
 
 // Присвоение по ссылке и по значению
 
@@ -103,7 +95,6 @@ a = 10;
 console.log(a); // 10
 // Значение b не изменилось так как это отдельная копия
 console.log(b); // 5
-
 
 const a1 = ['Mango'];
 // Присвоение по ссылке.
@@ -126,22 +117,21 @@ b1.push('Ajax');
 console.log(a1); // ['Mango', 'Poly', 'Ajax']
 console.log(b1); // ['Mango', 'Poly', 'Ajax']
 
-
 // Присвоение по ссылке и по значению
 
 const x = [1, 2, 3];
 const y = [1, 2, 3];
 
-// не равны потому что сложные типы 
+// не равны потому что сложные типы
 // сравниваються по адрессам памяти, а не по значению
 
-console.log(x === y);   // false 
-console.log([1, 2, 3] === [1, 2, 3]);   // false 
+console.log(x === y); // false
+console.log([1, 2, 3] === [1, 2, 3]); // false
 
-// примитивы 
+// примитивы
 // сравниваються по значению
 
-console.log(5 === 5);   // true
+console.log(5 === 5); // true
 
 // =================
 
@@ -150,7 +140,6 @@ let w = q;
 
 console.log(q); // 5
 console.log(w); // 5
-
 
 const c = [1, 2, 3];
 const v = c;
@@ -163,13 +152,12 @@ c[3] = 4;
 console.log(c); // [1, 2, 3, 4]
 console.log(v); // [1, 2, 3, 4]
 
-
 //================================================================
 
 // Методы split() и join()
 
 // split(s) — позволяет превратить строку в массив, разбив ее по разделителю s
-// join(s) — делает в точности противоположное split. 
+// join(s) — делает в точности противоположное split.
 // Он берет массив и склеивает его в строку, используя s как разделитель
 
 // split
@@ -188,7 +176,6 @@ console.log(sameMessage);
 const words = sameMessage.split(' ');
 console.log(words);
 
-
 //================================================================
 
 // join
@@ -199,8 +186,6 @@ const clients = ['Mango', 'Poly', 'Ajax'];
 console.log(clients.join(' ')); // "Mango Poly Ajax"
 console.log(clients.join(',')); // "Mango,Poly,Ajax"
 console.log(clients.join('-')); // "Mango-Poly-Ajax"
-
-
 
 //================================================================
 
@@ -218,7 +203,6 @@ const clients = ['Mango', 'Ajax', 'Poly', 'Kiwi'];
 console.log(clients.includes('Poly')); // true
 console.log(clients.includes('Monkong')); // false
 
-
 // Выносим варианты в массив
 const redFruits = ['apple', 'strawberry', 'cherry', 'cranberries'];
 const fruit = 'cherry';
@@ -226,7 +210,6 @@ const fruit = 'cherry';
 if (redFruits.includes(fruit)) {
   console.log('It is a red fruit!');
 }
-
 
 //================================================================
 
@@ -261,7 +244,6 @@ console.log(stack); // []
 
 stack.pop(); //  undefined
 
-
 // shift() — удаляет элемент из начала массива
 // unshift() — добавляет элемент в начало массива.
 
@@ -273,7 +255,6 @@ console.log(clients); // ["Ajax", "Poly"]
 clients.unshift('Kiwi');
 console.log(clients); // ["Kiwi", "Ajax", "Poly"]
 
-
 //================================================================
 
 // Метод slice()
@@ -281,7 +262,7 @@ console.log(clients); // ["Kiwi", "Ajax", "Poly"]
 
 // Копирует элементы от begin, до, но не включая, end
 
-slice(begin, end)
+slice(begin, end);
 
 const array = [1, 2, 3, 4, 5];
 array.slice(1, 4); // [2, 3, 4]
@@ -289,7 +270,6 @@ array.slice(1, 4); // [2, 3, 4]
 array.slice(); // [1, 2, 3, 4, 5] делает копию
 
 array.slice(1); // [2, 3, 4, 5] копирует с первого и до конца
-
 
 const clients = ['Mango', 'Ajax', 'Poly', 'Kiwi'];
 
@@ -306,13 +286,12 @@ console.log(clients.slice()); // ["Mango", Ajax", "Poly", "Kiwi"]
 // Вернет новый массив состоящих из последних двух элементом исходного
 console.log(clients.slice(-2)); // ["Poly", "Kiwi"]
 
-
 //================================================================
 
 // Метод splice()
 // изменяет оригинал
 
-const cards = ['card-1', 'card-2', 'card-3', 'card-4', 'card-5']
+const cards = ['card-1', 'card-2', 'card-3', 'card-4', 'card-5'];
 
 // Удаление элементов массива
 // передаем позицию и количество элементов для удаления
@@ -358,7 +337,6 @@ console.log(colors); // ["red", "green", "purple", "blue"]
 colors.splice(1, 0, 'yellow', 'pink');
 console.log(colors); // ["red", 'yellow', 'pink', "green", "purple", "blue"]
 
-
 //================================================================
 
 // Замена элементов массива
@@ -380,13 +358,12 @@ languages.splice(2, 1, 'C#', 'Swift', 'Go');
 console.log(languages);
 // ["C", "Python", "C#", "Swift", "Go", "JavaScript"]
 
-
 // ===========================================
 
 // Галерея картинок. Слайдеры
 
 const images = ['img-1.jpg', 'img-2.jpg', 'img-3.jpg', 'img-4.jpg'];
-let currentImgidx = 0;  
+let currentImgidx = 0;
 
 console.log(images[currentImgidx]);
 currentImgidx += 1;
@@ -396,10 +373,9 @@ console.log(images[currentImgidx]);
 currentImgidx -= 1;
 console.log(images[currentImgidx]);
 
-
 // ==========================================
 
-// Метод concat() 
+// Метод concat()
 // для объединения двух или более массивов
 
 const oldClients = ['Mango', 'Ajax', 'Poly', 'Kiwi'];

@@ -1,4 +1,4 @@
-'use strict';   //Строгий режим
+'use strict'; //Строгий режим
 
 let car;
 const year = 2015;
@@ -91,13 +91,11 @@ console.log('a === z:', a === z); // true
 console.log('a !== b:', a !== b); // true
 console.log('a !== z:', a !== z); // false
 
-
-let input = prompt ('угадай число от 1 до 10'); //ответ будет строка
+let input = prompt('угадай число от 1 до 10'); //ответ будет строка
 
 input = Number(input); //функция переобразовывает строку в число
 
 console.log(typeof input);
-
 
 // Парсит из строки целое число
 console.log(Number.parseInt('5px')); // 5
@@ -111,14 +109,12 @@ console.log(Number.parseFloat('12qwe74')); // 12
 console.log(Number.parseFloat('12.46qwe79')); // 12.46
 console.log(Number.parseFloat('qweqwe')); // NaN
 
-
 // Проверка на число
 const validNumber = Number('51'); // 51
 console.log(Number.isNaN(validNumber)); // false (это число)
 
 const invalidNumber = Number('qweqwe'); // NaN
 console.log(Number.isNaN(invalidNumber)); // true (это не число)
-
 
 //  Math.floor(num) - округляет к меньшему числу
 console.log(Math.floor(1.7)); // 1
@@ -143,8 +139,6 @@ console.log(Math.pow(2, 4)); // 16
 console.log(Math.random()); // случайное число между 0 и 1
 console.log(Math.random() * (10 - 1) + 1); // случайное число от 1 до 10
 
-
-
 // Конкатенация строк
 const message = 'Mango ' + 'is' + ' happy';
 console.log(message); // Mango is happy
@@ -168,8 +162,6 @@ console.log(typeof result); // string
 result = 5 + 5 + '5';
 console.log(result); // '105'
 console.log(typeof result); // string
-
-
 
 // Свойства и методы строк
 /*
@@ -198,7 +190,6 @@ console.log(message1.indexOf('hello')); // -1
 console.log(message1.includes('welcome')); // false
 console.log(message1.includes('Welcome')); // true
 
-
 // Шаблонные строки и интерполяция
 // Используя переменные необходимо составить строку с подставленными значениями
 const name1 = 'Mango';
@@ -223,9 +214,8 @@ console.log(sameMessage); // My name is Mango, I'm 2 years old and happy.
 // В интерполяции можно использовать любое валидное выражение
 console.log(`Результат сложения равен ${2 + 2}.`); // Результат сложения равен 4.
 
-
 // Логические операторы
-// false в логическом преобразовании: 
+// false в логическом преобразовании:
 // 0, NaN, null, undefined, пустая строка: "" или '', false
 
 // && - and; || - or; ! - not;
@@ -233,22 +223,22 @@ console.log(`Результат сложения равен ${2 + 2}.`); // Ре
 const min = 10;
 const max = 50;
 const value3 = 40;
-const isInRange = value3 >= 10 && value3 <= 50;  // and
-const isInRange3 = value3 >= 10 || value3 <= 50;  // or
+const isInRange = value3 >= 10 && value3 <= 50; // and
+const isInRange3 = value3 >= 10 || value3 <= 50; // or
 
 console.log(isInRange); // true
 console.log(isInRange); // true
 
 const isInRange2 = 1 && 2; // true && true
-console.log (1 && 2 && 3 && 5); //так как все значения true вывидится последнее 6
-console.log (1 && 0 && 5); // так как 0 это false вывидится первое значение false 0
+console.log(1 && 2 && 3 && 5); //так как все значения true вывидится последнее 6
+console.log(1 && 0 && 5); // так как 0 это false вывидится первое значение false 0
 
 const isInRange4 = 1 || 2; // true && true
-console.log (1 || 2 || 3 || 5); //так как все значения true вывидится первое 1
-console.log (1 || 0 || 5); // первое true 1 выведит 1
+console.log(1 || 2 || 3 || 5); //так как все значения true вывидится первое 1
+console.log(1 || 0 || 5); // первое true 1 выведит 1
 
 // Логическое «НЕ»
-// Оператор ! приводит операнд к булю, если необходимо, 
+// Оператор ! приводит операнд к булю, если необходимо,
 // а затем заменяет его на противоположный (инверсия)
 
 console.log(!true); // false
@@ -256,17 +246,14 @@ console.log(!false); // true
 console.log(!1); // false
 console.log(!0); // true
 
-
 // При выполнении логических операций, правый операнд может не вычисляться.
 // false && (этот операнд не вычисляется)
 // true || (этот операнд не вычисляется)
 
-
-
 //Операторы ветвеления
 
 // Инструкция if
-// Условие помещают за оператором if в круглых скобках. 
+// Условие помещают за оператором if в круглых скобках.
 // Если условие приводится к true, то выполняется код в фигурных скобках (ветка).
 let cost1 = 0;
 const subscription1 = 'pro';
@@ -287,9 +274,8 @@ if (subscription2 === 'pro') {
 
 console.log(cost2); // 0
 
-
 // Инструкция if...else
-// в случае если условие приводится к false, 
+// в случае если условие приводится к false,
 // выполнится код в фигурных скобках после оператора else
 let cost3;
 const subscription3 = 'free';
@@ -314,21 +300,22 @@ if (subscription === 'pro') {
 
 console.log(cost); // 100
 
-
-
 // Инструкция else...if
-// При первом же true проверки прекратятся и 
+// При первом же true проверки прекратятся и
 // выполнится только один сценарий, соответствующий этому true
 const min2 = 18;
 const max2 = 35;
 const value1 = 90;
 let messag3;
 
-if (value1 < 18) {    // false
+if (value1 < 18) {
+  // false
   messag3 = 'Вы не подходите по возрасту, вам нет 18';
-} else if (value1 > 10 && value1 < 50) {    // false
+} else if (value1 > 10 && value1 < 50) {
+  // false
   messag3 = 'Вы проходите по возврасту';
-} else if (value1 > 35) {     // true
+} else if (value1 > 35) {
+  // true
   messag3 = 'Вы не подходите по возрасту, вы старше';
 } else {
   messag3 = 'Ваш возраст не известен';
@@ -336,9 +323,8 @@ if (value1 < 18) {    // false
 
 console.log(messag3);
 
-
 // Тернарный оператор
-// Есть конструкция, похожая на if...else, 
+// Есть конструкция, похожая на if...else,
 // с упрощенным синтаксисом, называемая тернарный оператор
 // {условие} ? {выражение если условие правдиво} : {выражение если условие не правдиво}
 let type2;
@@ -354,11 +340,10 @@ if (age1 >= 18) {
 const age2 = 20;
 const type1 = ag2 >= 18 ? 'adult' : 'child';
 
-
 // Инструкция switch для сравнения
-const takeout = 0;  // сам заберу
-const courier = 1;  // доставка курером
-const post = 2;     // передать по почте
+const takeout = 0; // сам заберу
+const courier = 1; // доставка курером
+const post = 2; // передать по почте
 const promptLabel = `Выбери способ доставки: ${takeout} - самовывоз, ${courier} - курером, ${post} - по почте`;
 
 let userChoise = prompt(promptLabel);
@@ -376,7 +361,6 @@ let message4;
 
 // console.log(message4);
 
-
 // switch(userChoise) {
 //   case takeout:
 //     message4 = 'Способ доставки: самовывоз';
@@ -389,7 +373,7 @@ let message4;
 //   case post:
 //     message4 = 'Способ доставки: по почте';
 //     break;
-  
+
 //   default:
 //     message4 = 'Ничего не выбрано'
 // }
@@ -400,21 +384,21 @@ if (userChoise === null) {
   message4 = 'Заказ отменен';
 } else {
   userChoise = Number(userChoise);
-  switch(userChoise) {
+  switch (userChoise) {
     case takeout:
       message4 = 'Способ доставки: самовывоз';
       break; // прерывает исполнение кода дальше
-  
+
     case courier:
       message4 = 'Способ доставки: курером';
       break;
-  
+
     case post:
       message4 = 'Способ доставки: по почте';
       break;
-    
+
     default:
-      message4 = 'Ничего не выбрано'
+      message4 = 'Ничего не выбрано';
   }
 }
 
