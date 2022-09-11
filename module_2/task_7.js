@@ -1,11 +1,11 @@
 'use strict';
 
 /**
- * Есть массив logins с логинами пользователей.
- * Напиши скрипт добавления логина в массив logins. Добавляемый логин должен:
+ * Есть массив loginsArray с логинами пользователей.
+ * Напиши скрипт добавления логина в массив loginsArray. Добавляемый логин должен:
  *
  * проходить проверку на длину от 4 до 16-ти символов включительно
- * быть уникален, то есть отсутствовать в массиве logins
+ * быть уникален, то есть отсутствовать в массиве loginsArray
  *
  *
  * Разбей задачу на подзадачи с помощью функций.
@@ -33,7 +33,7 @@
  * + Если isLoginUnique вернет false, тогда addLogin не добавляет
  * логин в массив и возвращает строку 'Такой логин уже используется!'
  * + Если isLoginUnique вернет true, addLogin добавляет новый логин
- * в logins и возвращает строку 'Логин успешно добавлен!'
+ * в loginsArray и возвращает строку 'Логин успешно добавлен!'
  *
  * 🔔 Принцип единственной ответственности функции - каждая функция делает
  * что-то одно. Это позволяет переиспользовать код и изменять логику
@@ -52,16 +52,53 @@
  *
  */
 
-const logins = ['Mango', 'robotGoogles', 'Poly', 'Aj4x1sBozz', 'qwerty123'];
+// const loginsArray = ['Mango', 'robotGoogles', 'Poly', 'Aj4x1sBozz', 'qwerty123'];
 
-const isLoginValid = function (login) {
-  if (login.length < 17 && login.length > 3) {
-    return true;
-  } else {
-    return false;
+// const isLoginValid = function (login) {
+//   if (login.length < 17 && login.length > 3) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// };
+// const isLoginUnique = function (allLogins, login) {
+//   let loginUnique = allLogins.includes(login);
+
+//   if (loginUnique === false) {
+//     allLogins.push(login);
+//   }
+//   return loginUnique;
+// };
+
+const loginsArray = [
+  'Mango',
+  'robotGoogles',
+  'Poly',
+  'Aj4x1sBozz',
+  'qwerty123',
+];
+
+const isLoginValid = login =>
+  login.length <= 16 && login.length >= 4 ? true : false;
+
+const isLoginUnique = (loginsArray, login) =>
+  loginsArray.includes(login) ? false : true;
+
+const addLogin = function (loginsArray, login) {
+  if (!isLoginValid(login)) {
+    return `${login}: Ошибка! Логин должен быть от 4 до 16 символов`;
   }
+
+  if (!isLoginUnique(loginsArray, login)) {
+    return `${login}: Такой логин уже используется!`;
+  }
+
+  loginsArray.push(login);
+
+  return `${login}: Логин успешно добавлен! `;
 };
 
+<<<<<<< HEAD
 // const isLoginUnique = function (allLogins, login) {
 //   let loginUnique = allLogins.includes(login);
 //   if (loginUnique === false) {
@@ -79,22 +116,11 @@ const isLoginUnique = function (allLogins, login) {
   allLogins.push(login);
   return false;
 };
+=======
+console.log(addLogin(loginsArray, 'Ajax')); // 'Логин успешно добавлен!'
+console.log(addLogin(loginsArray, 'robotGoogles')); // 'Такой логин уже используется!'
+console.log(addLogin(loginsArray, 'Zod')); // 'Ошибка! Логин должен быть от 4 до 16 символов'
+console.log(addLogin(loginsArray, 'jqueryisextremelyfast')); // 'Ошибка! Логин должен быть от 4 до 16 символов'
+>>>>>>> 9fe78c48596daa9fbe3746857cba11ce74846180
 
-const addLogin = function (allLogins, login) {
-  if (isLoginValid(login)) {
-    if (isLoginUnique(allLogins, login)) {
-      console.log('Такой логин уже используется!');
-    } else {
-      console.log('Логин успешно добавлен!');
-    }
-  } else {
-    console.log('Ошибка! Логин должен быть от 4 до 16 символов');
-  }
-};
-
-console.log(addLogin(logins, 'Ajax')); // 'Логин успешно добавлен!'
-console.log(addLogin(logins, 'robotGoogles')); // 'Такой логин уже используется!'
-console.log(addLogin(logins, 'Zod')); // 'Ошибка! Логин должен быть от 4 до 16 символов'
-console.log(addLogin(logins, 'jqueryisextremelyfast')); // 'Ошибка! Логин должен быть от 4 до 16 символов'
-
-console.log(logins);
+console.log(loginsArray);
