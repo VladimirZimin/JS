@@ -62,12 +62,22 @@ const isLoginValid = function (login) {
   }
 };
 
+// const isLoginUnique = function (allLogins, login) {
+//   let loginUnique = allLogins.includes(login);
+//   if (loginUnique === false) {
+//     allLogins.push(login);
+//   }
+//   return loginUnique;
+// };
+
 const isLoginUnique = function (allLogins, login) {
-  let loginUnique = allLogins.includes(login);
-  if (loginUnique === false) {
-    allLogins.push(login);
+  for (const userLogin of allLogins) {
+    if (userLogin === login) {
+      return true;
+    }
   }
-  return loginUnique;
+  allLogins.push(login);
+  return false;
 };
 
 const addLogin = function (allLogins, login) {
