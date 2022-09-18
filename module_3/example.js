@@ -444,3 +444,236 @@ cart.decreaseQuantity('🍋');
 console.table(cart.getItems());
 
 console.log('Total: ', cart.countTotalPrice());
+
+// значение в массиве
+
+const products2 = [
+  { name: 'Radar', price: 1300, quantity: 4 },
+  { name: 'Scanner', price: 2700, quantity: 3 },
+  { name: 'Droid', price: 400, quantity: 7 },
+  { name: 'Grip', price: 1200, quantity: 9 },
+];
+
+function getAllPropValues(productName) {
+  const values = [];
+
+  for (let product of products2) {
+    if (productName in product) {
+      values.push(product[productName]);
+    }
+  }
+
+  return values;
+}
+
+getAllPropValues('name');
+getAllPropValues('quantity');
+getAllPropValues('price');
+getAllPropValues('category');
+
+// общая стоимость
+
+const products1 = [
+  { name: 'Radar', price: 1300, quantity: 4 },
+  { name: 'Scanner', price: 2700, quantity: 3 },
+  { name: 'Droid', price: 400, quantity: 7 },
+  { name: 'Grip', price: 1200, quantity: 9 },
+];
+
+function calculateTotalPrice(productName) {
+  let totalPrice = 0;
+
+  for (const product of products1) {
+    const { name, price, quantity } = product;
+    if (productName === name) {
+      totalPrice = price * quantity;
+    }
+  }
+
+  return totalPrice;
+}
+
+calculateTotalPrice('Radar');
+
+/**
+ *
+ * деструктуризация в функции
+ *
+ */
+
+function calculateMeanTemperature(forecast) {
+  const {
+    today: { low: todayLow, high: todayHigh },
+    tomorrow: { low: tomorrowLow, high: tomorrowHigh },
+  } = forecast;
+
+  // Change code above this line
+  return (todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4;
+}
+
+/**
+ *
+ * ОПЕРАЦИЯ SPREAD ПРИ ПЕРЕДАЧЕ АРГУМЕНТОВ
+ *
+ */
+
+const scores = [89, 64, 42, 17, 93, 51, 26];
+const bestScore1 = Math.max(...scores);
+const worstScore1 = Math.min(...scores);
+
+console.log(bestScore);
+console.log(worstScore);
+
+// ===================================
+const firstGroupScores = [64, 42, 93];
+const secondGroupScores = [89, 14, 51, 26];
+const thirdGroupScores = [29, 47, 18, 97, 81];
+
+const allScores = [
+  ...firstGroupScores,
+  ...secondGroupScores,
+  ...thirdGroupScores,
+]; // склеили
+const bestScore = Math.max(...allScores); // самое большое число
+const worstScore = Math.min(...allScores); // // самое маденькое число
+
+console.log(allScores);
+console.log(bestScore);
+console.log(worstScore);
+
+// ====================================
+
+function makeTask(data) {
+  const completed = false;
+  const category = 'General';
+  const priority = 'Normal';
+  // Change code below this line
+  return { completed, category, priority, ...data };
+  // Change code above this line
+}
+
+makeTask({});
+// возвращает { category: "General", priority: "Normal", completed: false }
+
+makeTask({ category: 'Homemade', priority: 'Low', text: 'Take out the trash' });
+// возвращает { category: "Homemade", priority: "Low", text: "Take out the trash", completed: false }
+
+makeTask({ category: 'Finance', text: 'Take interest' });
+// возвращает { category: "Finance", priority: "Normal", text: "Take interest", completed: false }
+
+/**
+ *
+ * ОПЕРАЦИЯ REST ДЛЯ СБОРА ВСЕХ АРГУМЕНТОВ ФУНКЦИИ
+ *
+ */
+
+// сумма чисел, которые больше первого числа
+function addOverNum(firstNumber, ...args) {
+  let total = 0;
+
+  for (const arg of args) {
+    if (firstNumber < arg) {
+      total += arg;
+    }
+  }
+  return total;
+}
+
+addOverNum(1, 2);
+addOverNum(10, 12, 4, 11, 48, 10, 8);
+addOverNum(20, 74, 11, 62, 46, 12, 36);
+
+// =====================================
+
+function findMatches(firstNumbers, ...args) {
+  const matches = [];
+
+  for (const firstNumber of firstNumbers) {
+    for (const arg of args) {
+      if (firstNumber === arg) {
+        matches.push(firstNumber);
+      }
+    }
+  }
+
+  return matches;
+}
+
+findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7);
+findMatches([10, 24, 41, 6, 9, 19], 24, 11, 9, 23, 41);
+
+/**
+ *
+ * МЕТОДЫ ОБЪЕКТА
+ *
+ */
+
+const bookShelf = {
+  books: ['The last kingdom', 'The guardian of dreams'],
+
+  getBooks() {
+    return this.books;
+  },
+  addBook(bookName) {
+    this.books.push(bookName);
+  },
+  removeBook(bookName) {
+    this.books.splice(this.books.indexOf(bookName), 1);
+    return `Deleting book ${bookName}`;
+  },
+  updateBook(oldName, newName) {
+    this.books.splice(this.books.indexOf(oldName), 1, newName);
+
+    return `Updating book ${oldName} to ${newName}`;
+  },
+};
+
+bookShelf.updateBook('The last kingdom', 'Dune');
+
+// ==============================================
+const atTheOldToad = {
+  potions: [
+    { name: 'Speed potion', price: 460 },
+    { name: 'Dragon breath', price: 780 },
+    { name: 'Stone skin', price: 520 },
+  ],
+  getPotions() {
+    return this.potions;
+  },
+  addPotion(newPotion) {
+    for (const potion of this.potions) {
+      if (potion.name === newPotion.name) {
+        return `Error! Potion ${newPotion.name} is already in your inventory!`;
+      }
+    }
+    this.potions.push(newPotion);
+
+    return this.potions;
+  },
+  removePotion(potionName) {
+    for (let i = 0; i < this.potions.length; i += 1) {
+      if (this.potions[i].name === potionName) {
+        return this.potions.splice(i, 1);
+      }
+    }
+    return `Potion ${potionName} is not in inventory!`;
+  },
+  updatePotionName(oldName, newName) {
+    for (let i = 0; i < this.potions.length; i += 1) {
+      if (this.potions[i].name === oldName) {
+        this.potions[i].name = newName;
+        console.log(this.potions);
+
+        return this.potions;
+      }
+    }
+
+    return `Potion ${oldName} is not in inventory!`;
+  },
+};
+
+atTheOldToad.getPotions();
+atTheOldToad.addPotion({ name: 'Invisibility', price: 620 });
+atTheOldToad.addPotion({ name: 'Stone skin', price: 240 });
+atTheOldToad.removePotion('Dragon breath');
+atTheOldToad.updatePotionName('Dragon breath', 'Polymorth');
