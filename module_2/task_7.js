@@ -81,7 +81,7 @@ const loginsArray = [
 const isLoginValid = login =>
   login.length <= 16 && login.length >= 4 ? true : false;
 
-const isLoginUnique = (loginsArray, login) =>
+const isLoginUnique1 = (loginsArray, login) =>
   loginsArray.includes(login) ? false : true;
 
 const addLogin = function (loginsArray, login) {
@@ -89,7 +89,7 @@ const addLogin = function (loginsArray, login) {
     return `${login}: Ошибка! Логин должен быть от 4 до 16 символов`;
   }
 
-  if (!isLoginUnique(loginsArray, login)) {
+  if (!isLoginUnique1(loginsArray, login)) {
     return `${login}: Такой логин уже используется!`;
   }
 
@@ -98,7 +98,6 @@ const addLogin = function (loginsArray, login) {
   return `${login}: Логин успешно добавлен! `;
 };
 
-<<<<<<< HEAD
 // const isLoginUnique = function (allLogins, login) {
 //   let loginUnique = allLogins.includes(login);
 //   if (loginUnique === false) {
@@ -116,11 +115,9 @@ const isLoginUnique = function (allLogins, login) {
   allLogins.push(login);
   return false;
 };
-=======
 console.log(addLogin(loginsArray, 'Ajax')); // 'Логин успешно добавлен!'
 console.log(addLogin(loginsArray, 'robotGoogles')); // 'Такой логин уже используется!'
 console.log(addLogin(loginsArray, 'Zod')); // 'Ошибка! Логин должен быть от 4 до 16 символов'
 console.log(addLogin(loginsArray, 'jqueryisextremelyfast')); // 'Ошибка! Логин должен быть от 4 до 16 символов'
->>>>>>> 9fe78c48596daa9fbe3746857cba11ce74846180
 
 console.log(loginsArray);
