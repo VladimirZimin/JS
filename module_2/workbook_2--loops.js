@@ -343,3 +343,27 @@ for (let i = 0; i < numbers2.length; i += 1) {
 
   console.log(`Число больше чем ${threshold}: ${numbers2[i]}`); // 18, 29, 34
 }
+
+/**
+ *
+ **
+ ***
+ ****
+ *****
+ ******
+ *
+ * пирамида
+ */
+
+for (let index = '*'; index.length < 8; index += '*') {
+  console.log(index);
+}
+
+// ================================================
+
+let a = '*';
+
+for (let i = 1; i < 5; i += 1) {
+  console.log(a);
+  a += '*';
+}

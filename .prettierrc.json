@@ -9,5 +9,13 @@
     "bracketSameLine": false,
     "arrowParens": "avoid",
     "proseWrap": "always",
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "overrides": [
+      {
+        "files": "*.md",
+        "options": {
+          "tabWidth": 2
+        }
+      }
+    ]
   }

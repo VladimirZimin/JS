@@ -200,3 +200,6 @@ const fn = function (num) {
 const sum = fn(1);
 
 console.log(sum(10));
+
+// ========================================================
+console.log('hello');

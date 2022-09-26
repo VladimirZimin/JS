@@ -176,6 +176,10 @@ console.log(sameMessage);
 const words = sameMessage.split(' ');
 console.log(words);
 
+const c = 'hello word!!';
+console.log(c.split('!')); // ['hello word', '', '']
+console.log(c.split('!').join('')); // hello word
+
 //================================================================
 
 // join
