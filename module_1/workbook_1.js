@@ -1,4 +1,9 @@
-'use strict'; //Строгий режим
+/**
+ * Строгий режим
+ * - 'use strict' в начале файла .js
+ * - type="module" при подключении в HTML
+ */
+'use strict';
 
 let car;
 const year = 2015;

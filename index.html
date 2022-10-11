@@ -6,9 +6,36 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home work 1</title>
+  <style>
+    body {
+      background-color: rgb(0, 0, 0);
+      color: #ccc;
+      font-size: 20px;
+    }
+
+    .counter {
+      display: flex;
+      justify-content: center;
+    }
+
+    .js-value {
+      margin: 0 15px;
+      padding: 10px 30px;
+      background-color: burlywood;
+      color: darkblue;
+      font-weight: 700;
+      font-size: 35px;
+    }
+
+    button {
+      padding: 0 50px;
+      font: inherit;
+      border: 1px solid red;
+    }
+  </style>
 </head>
 
-<body style="background-color: rgb(0, 0, 0); color: #ccc;">
+<body>
   <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
 
   <!-- <label>
@@ -21,13 +48,39 @@
 
     <p class="js-output">Сумма: <span>0</span></p> -->
 
+  <div class="counter">
+    <button class="js-decrement">-</button>
+    <p class="js-value">0</p>
+    <button class="js-increment">+</button>
+  </div>
+
+  <div class="counter" id="counter-1">
+    <button class="js-decrement" data-decrement>-</button>
+    <p class="js-value" data-value>0</p>
+    <button class="js-increment" data-increment>+</button>
+  </div>
+
+  <div class="counter" id="counter-2">
+    <button class="js-decrement" data-decrement>-</button>
+    <p class="js-value" data-value>0</p>
+    <button class="js-increment" data-increment>+</button>
+  </div>
+
   <!-- <script src="./other/dom.js"></script> -->
   <!-- <script src="./module_2/task_6.js"></script> -->
   <!-- <script src="./module_2/task_7.js"></script> -->
   <!-- <script src="/module_4/lodash.js"></script> -->
-  <!-- <script src="./module_4/task/task_1.js"></script> -->
+  <!-- <script src="./module_4/task/task_1.js" type="module"></script> -->
   <!-- <script src="./module_4/task/task_2.js"></script> -->
   <!-- <script src="./module_4/task/task_all.js"></script> -->
+
+  <!-- <script src="./module_5/counter.js" type="module"></script>
+  <script src="./module_5/counter2.js" type="module"></script> -->
+
+  <!-- <script src="./module_5/workbook_5--objPrototypeConstructor.js"></script> -->
+  <!-- <script src="./module_5/task/task_3.js" type="module"></script> -->
+  <script src="./module_5/task/task_all.js" type="module"></script>
+
 
 </body>
 
