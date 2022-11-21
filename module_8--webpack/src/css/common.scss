@@ -1,0 +1,8 @@
+body {
+  background: rgb(0, 0, 0);
+  color: aqua;
+  & h1 {
+    color: antiquewhite;
+  }
+}
+

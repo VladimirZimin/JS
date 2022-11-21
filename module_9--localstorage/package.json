@@ -1,0 +1,40 @@
+{
+  "name": "module_9--localstorage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/*.html --no-source-maps",
+    "build": "parcel build src/*.html --public-url ./dist/"
+  },
+  "author": "Vladimir Zimin",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.8.0",
+    "parcel-plugin-handlebars-precompile": "^1.0.2",
+    "prettier": "2.7.1"
+  },
+  "dependencies": {
+    "@vimeo/player": "^2.18.0",
+    "lodash.throttle": "^4.1.1",
+    "parcel-plugin-custom-dist-structure": "^1.1.18"
+  },
+  "customDistStructure": {
+    "config": {
+      ".js": "js",
+      ".css": "css",
+      "images": [
+        ".jpg",
+        ".png"
+      ],
+      ".fileExtension": "folder/in/dist",
+      "folder/in/dist": [
+        ".file",
+        ".extensions"
+      ]
+    },
+    "options": {
+      "development": true
+    }
+  }
+}

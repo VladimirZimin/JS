@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Австралия",
+    "capital": "Канберра",
+    "currency": "Австралийский доллар (AUD)",
+    "language": "Английский",
+    "population": 24970200,
+    "flag": "https://www.dorogavrim.ru/img/flagi/flag_australia.jpg",
+    "infected": false
+  },
+  {
+    "name": "Боливия",
+    "capital": "Сукре",
+    "currency": "Боливиано (BOB)",
+    "language": "Испанский, кечуа, аймара, гуарани",
+    "population": 10461053,
+    "flag": "https://www.dorogavrim.ru/img/flagi/flag_bolivia.jpg",
+    "infected": true
+  },
+  {
+    "name": "Великобритания",
+    "capital": "Лондон",
+    "currency": "Фунт стерлингов (GBP)",
+    "language": "Английский",
+    "population": 63395574,
+    "flag": "https://www.dorogavrim.ru/img/flagi/flag_britaniya.jpg",
+    "infected": false
+  },
+  {
+    "name": "Ямайка",
+    "capital": "Кингстон",
+    "currency": "Ямайский доллар (JMD)",
+    "language": "Английский",
+    "population": 2868380,
+    "flag": "https://www.dorogavrim.ru/img/flagi/flag_yamaika.jpg",
+    "infected": false
+  },
+  {
+    "name": "Швеция",
+    "capital": "Стокгольм",
+    "currency": "Шведская крона (SEK)",
+    "language": "Шведский",
+    "population": 9723809,
+    "flag": "https://www.dorogavrim.ru/img/flagi/flag_shveciya.jpg",
+    "infected": true
+  },
+  {
+    "name": "Португалия",
+    "capital": "Лиссабон",
+    "currency": "Евро (EUR)",
+    "language": "Португальский",
+    "population": 10799270,
+    "flag": "https://www.dorogavrim.ru/img/flagi/flag_portugaliya.jpg",
+    "infected": true
+  },
+  {
+    "name": "Украина",
+    "capital": "Киев",
+    "currency": "Гривна (UAH)",
+    "language": "Украинский",
+    "population": 42157253,
+    "flag": "https://www.dorogavrim.ru/img/flagi/flag_ukraina.jpg",
+    "infected": false
+  }
+]
