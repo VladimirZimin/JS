@@ -1,0 +1,31 @@
+{
+  "name": "module_11--hw",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "parcel src/*.html",
+    "build": "parcel build src/*.html"
+  },
+  "keywords": [],
+  "author": "Vladimir Zimin",
+  "license": "ISC",
+  "dependencies": {
+    "lodash.debounce": "^4.0.8",
+    "modern-normalize": "^1.1.0",
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-nuke-dist": "^1.0.1",
+    "prettier": "2.8.0"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.6.0",
+    "bootstrap.native": "^3.0.13",
+    "flatpickr": "^4.6.13",
+    "lodash.throttle": "^4.1.1",
+    "notiflix": "^3.2.5",
+    "parcel": "^2.6.0",
+    "parcel-plugin-handlebars-precompile": "^1.0.2",
+    "parcel-reporter-clean-dist": "^1.0.4",
+    "posthtml-include": "^1.7.4"
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead"
+}
