@@ -1,5 +1,5 @@
 {
-  "name": "c",
+  "name": "10",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,10 +8,12 @@
     "build": "parcel build src/*.html"
   },
   "keywords": [],
-  "author": "Vladimir Zimin",
+  "author": "Vladimir Zimin <zimin.frontend@gmail.com",
   "license": "ISC",
   "devDependencies": {
+    "json-server": "^0.16.2",
     "parcel-bundler": "^1.12.4",
+    "parcel-plugin-handlebars-precompile": "^1.0.2",
     "parcel-plugin-nuke-dist": "^1.0.1",
     "prettier": "2.8.0"
   },
